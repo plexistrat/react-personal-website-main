@@ -1,42 +1,25 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const formRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Δημιούργησε το object με τα ακριβή πεδία που περιμένει το EmailJS template
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-    };
-
     emailjs
-      .send(
-        "service_k2gvkni", // Αντικατέστησε με το Service ID σου
-        "template_fryyr36", // Αντικατέστησε με το Template ID σου
-        templateParams,
-        "t075-YkzlwWcohHST" // Αντικατέστησε με το Public Key σου
+      .sendForm(
+        "service_k2gvkni",
+        "template_fryyr36",
+        formRef.current,
+        "t075-YkzlwWcohHST"
       )
       .then(
         () => {
           alert("Message sent successfully!");
-          setFormData({ name: "", email: "", subject: "", message: "" });
+          formRef.current.reset();
         },
         (error) => {
           alert("Failed to send message. Please try again.");
@@ -50,39 +33,26 @@ function Contact() {
       <div className="banner">
         <h2>Let's make something great together!</h2>
       </div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" ref={formRef} onSubmit={handleSubmit}>
         <h1>Contact</h1>
         <div className="name-email">
           <input
             type="text"
-            name="name"
+            name="from_name"
             placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
             required
           />
           <input
             type="email"
-            name="email"
+            name="from_email"
             placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
             required
           />
         </div>
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
-          required
-        />
+        <input type="text" name="subject" placeholder="Subject" required />
         <textarea
           name="message"
           placeholder="Write your message here..."
-          value={formData.message}
-          onChange={handleChange}
           required
         />
         <button className="sendButton" type="submit">
