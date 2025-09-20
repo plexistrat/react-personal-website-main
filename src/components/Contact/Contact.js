@@ -18,10 +18,23 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Δημιούργησε το object με τα ακριβή πεδία που περιμένει το EmailJS template
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
     emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_PUBLIC_KEY")
+      .send(
+        "service_k2gvkni", // Αντικατέστησε με το Service ID σου
+        "template_fryyr36", // Αντικατέστησε με το Template ID σου
+        templateParams,
+        "t075-YkzlwWcohHST" // Αντικατέστησε με το Public Key σου
+      )
       .then(
-        (result) => {
+        () => {
           alert("Message sent successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
