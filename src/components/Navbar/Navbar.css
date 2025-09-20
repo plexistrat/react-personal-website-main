@@ -1,0 +1,151 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.navbar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+/* Desktop buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons button {
+  color: lightsteelblue;
+  background-color: #333;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  color: lightpink;
+}
+
+/* Hide desktop buttons on small screens */
+@media screen and (max-width: 500px) {
+  .buttons {
+    display: none;
+  }
+}
+
+/* Burger icon */
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 28px;
+    padding: 10px;
+  }
+}
+
+/* Burger menu container */
+.burgerPage {
+  position: fixed;
+  top: 0;
+  left: -100%; /* κρυφό εκτός οθόνης */
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Open state */
+.burgerPage.open {
+  left: 0;
+}
+
+/* Close button */
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  color: lightsteelblue;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+  color: lightpink;
+}
+
+/* Burger menu buttons */
+.burgerPage button {
+  color: lightsteelblue;
+  background-color: #333;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 22px;
+  margin: 10px 0;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.burgerPage button:hover {
+  transform: scale(1.2);
+  color: lightpink;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent */
+  z-index: 50;
+  opacity: 0;
+  animation: fadeInOverlay 0.3s forwards;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

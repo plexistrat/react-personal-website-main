@@ -1,0 +1,90 @@
+.App {
+  margin: 0px;
+  padding: 0px;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.heroPhoto {
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 140px;
+}
+.haarTele {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.haarTele img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 140px;
+}
+.heroPhoto img {
+  width: 450px;
+  height: 550px;
+  border-radius: 50%;
+}
+.heroText {
+  margin-left: auto;
+  width: 500px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 140px;
+  padding-top: 40px;
+}
+
+.heroText h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.heroText h1:hover {
+  color: lightcoral;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.heroText h2 {
+  font-size: 40px;
+  text-align: center;
+}
+.heroText h2:hover {
+  color: lightcoral;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.heroText h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.heroText h3:hover {
+  color: lightcoral;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.heroText button {
+  background-color: lightskyblue;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.heroText button:hover {
+  background-color: lightpink;
+  transition: 0.4s;
+  cursor: pointer;
+}

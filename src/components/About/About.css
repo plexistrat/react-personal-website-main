@@ -1,0 +1,202 @@
+.App {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(to bottom, #4f3838, hsl(210, 27%, 29%));
+  padding: 20px;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1500px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* About Content */
+.aboutcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  animation: fadeInUp 1s ease-in;
+}
+
+.aboutcontent h1 {
+  font-size: 40px;
+  color: lightsteelblue;
+  margin-bottom: 20px;
+}
+
+/* Text Blocks */
+.intro,
+.bio,
+.interests,
+.closing {
+  width: 600px;
+  margin: 15px;
+  font-size: 20px;
+  color: lightsteelblue;
+  line-height: 1.6;
+  animation: fadeInUp 1.3s ease-in;
+}
+
+@media screen and (max-width: 671px) {
+  .intro,
+  .bio,
+  .interests,
+  .closing {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .intro,
+  .bio,
+  .interests,
+  .closing {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .intro,
+  .bio,
+  .interests,
+  .closing {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+
+/* Skills Section */
+.skillscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  margin-top: 80px;
+  animation: fadeInUp 1.6s ease-in;
+}
+
+@media screen and (max-width: 425px) {
+  .skillscontainer {
+    margin-top: 50px;
+  }
+}
+
+.skills {
+  font-size: 28px;
+  color: lightsteelblue;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  .skills {
+    font-size: 20px;
+  }
+}
+
+/* Cards Grid */
+.cards {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: transparent;
+  color: #fff;
+  animation: fadeInUp 2s ease-in;
+}
+
+@media screen and (max-width: 840px) {
+  .cards {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .cards {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cards {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .cards {
+    width: 200px;
+  }
+}
+
+/* Single Card */
+.card {
+  width: 200px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.4));
+}
