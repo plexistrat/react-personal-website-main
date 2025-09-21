@@ -17,17 +17,6 @@ function Contact() {
       >
         <h1>Contact</h1>
 
-        <div className="name-email">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-        </div>
-        <input type="text" name="subject" placeholder="Subject" required />
-        <textarea
-          name="message"
-          placeholder="Write your message here..."
-          required
-        />
-
         <button className="sendButton" type="submit">
           <MdEmail style={{ marginRight: "8px", fontSize: "20px" }} /> Send
         </button>
