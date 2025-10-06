@@ -26,7 +26,7 @@ const projectsData = [
     title: "Portfolio Website",
     description:
       "A responsive personal website showcasing my work as both a music tutor and developer.",
-    image: "./underconstruction.png",
+    image: "./personal website.jpeg",
     link: "#",
     technologies: ["React", "JavaScript", "HTML/CSS"],
   },

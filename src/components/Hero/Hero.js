@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { Download } from "lucide-react";
 import "./Hero.css";
 
 export default function Hero() {
@@ -38,9 +37,9 @@ export default function Hero() {
 
         <div className="profession-container">
           <h2 className="profession-text">
-            Guitar/Music Tutor
-            <span className="profession-divider"></span>
             Frontend Developer
+            <span className="profession-divider"></span>
+            Guitar/Music Tutor
           </h2>
         </div>
 
