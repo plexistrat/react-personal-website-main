@@ -45,7 +45,7 @@ export default function Hero() {
             Guitar/Music Tutor
           </h2>
         </div>
-              <a href="/NewCV.pdf" download className="download-button">
+              <a href="/CV.pdf" download className="download-button">
   <span>Download CV</span>
   <span className="button-arrow">→</span>
 </a>
