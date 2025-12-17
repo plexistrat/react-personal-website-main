@@ -8,12 +8,15 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
-  function downloadCv() {
-    const link = document.createElement("a");
-    link.href = "./CV.pdf";
-    link.download = "CV.pdf";
-    link.click();
-  }
+function downloadCv() {
+  const link = document.createElement("a");
+  link.href = "/NewCV.pdf";       
+  link.download = "NewCV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 
   return (
     <div className="hero-section">
@@ -25,7 +28,7 @@ export default function Hero() {
 
       {/* Photo container */}
       <div className={`hero-photo-container ${isVisible ? "visible" : ""}`}>
-        <img src="./mainPhoto.jpg" alt="Sakis Staikos" className="hero-photo" />
+        <img src="/mainPhoto.jpg" alt="Sakis Staikos" className="hero-photo" />
       </div>
 
       {/* Text content */}
