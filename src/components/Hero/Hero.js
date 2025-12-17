@@ -45,11 +45,13 @@ function downloadCv() {
             Guitar/Music Tutor
           </h2>
         </div>
-<button onClick={downloadCv} className="download-button"> {/* <Download size={20} className="download-icon" /> */} <span>Download CV</span> <span className="button-arrow">→</span> </button>
-
-
-     
-      </div>
+             <button onClick={downloadCv} className="download-button">
+              {/* <Download size={20} className="download-icon" /> */} 
+              <span>Download CV</span> 
+              <span className="button-arrow">→</span> 
+              </button>      
+        </div>
+              
     </div>
   );
 }
