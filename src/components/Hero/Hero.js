@@ -10,8 +10,8 @@ export default function Hero() {
 
   function downloadCv() {
     const link = document.createElement("a");
-    link.href = "./NewCV.pdf";
-    link.download = "NewCV.pdf";
+    link.href = "../NewCV.pdf";
+    link.download = "CV.pdf";
     link.click();
   }
 
