@@ -18,7 +18,7 @@ const projectsData = [
     description:
       "An interactive music learning platform designed for guitar students, featuring structured lessons, chord visualizations, and guided practice to support progress tracking and graded exams preparation .",
     image: "./GuitarStudyHub.jpg",
-    link: "#",
+    link: "https://github.com/plexistrat/native-testing-app",
     technologies: ["React Native", "JavaScript", "HTML/CSS"],
   },
   {
