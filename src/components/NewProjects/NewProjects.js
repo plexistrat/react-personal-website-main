@@ -14,12 +14,12 @@ const projectsData = [
   // Add more projects here
   {
     id: 2,
-    title: "Music Learning Platform",
+    title: "Guitar Study Hub",
     description:
-      "An interactive platform for guitar students to access lessons and track progress.",
-    image: "./underconstruction.png",
+      "An interactive music learning platform designed for guitar students, featuring structured lessons, chord visualizations, and guided practice to support progress tracking and graded exams preparation .",
+    image: "./GuitarStudyHub.jpg",
     link: "#",
-    technologies: ["React", "JavaScript", "HTML/CSS"],
+    technologies: ["React Native", "JavaScript", "HTML/CSS"],
   },
   {
     id: 3,
